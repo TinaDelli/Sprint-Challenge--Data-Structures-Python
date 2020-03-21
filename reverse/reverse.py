@@ -42,6 +42,18 @@ class LinkedList:
     # if we've gotten here, then the target node isn't in our list
     return False
 
+# Without making it a Doubly Linked List (adding a tail attribute), complete the reverse_list() function within reverse/reverse.py reverse the contents of the list.
+
+# For example,
+
+# 1->2->3->None
+# would become...
+
+# 3->2->1->None
   def reverse_list(self):
-    # TO BE COMPLETED
-    pass
+    head = self.head
+    if head is None:
+      return
+    while head.get_next():
+      self.add_to_head(head.get_next().value)
+      head = head.get_next()     
